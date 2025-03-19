@@ -27,7 +27,7 @@ for idx, rd in enumerate(rounds.keys()):
     if rd == 'champion':
         break
 
-    temp = rounds[rd].copy()  # Current round teams
+    temp = rounds[rd].copy()  # deep copy
     next_round = []
 
     while len(temp) > 0:
