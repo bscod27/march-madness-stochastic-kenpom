@@ -35,7 +35,7 @@ for idx, rd in enumerate(rounds.keys()):
         high_team, low_team = temp.pop(0), temp.pop(0)
         high_rk = df.loc[df['team'] == high_team, 'kenpom'].values[0]
         low_rk = df.loc[df['team'] == low_team, 'kenpom'].values[0]
-        # draw from Bernouilli random variable
+        # draw from Bernoulli random variable
         draw = np.random.binomial(n=1, p=high_rk / (high_rk + low_rk), size=1)
         # choose winner and store
         winner = high_team if draw == 0 else low_team
